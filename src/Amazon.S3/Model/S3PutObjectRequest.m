@@ -187,7 +187,7 @@
 #ifdef DEBUG
 -(void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
 {
-    AMZLog(@"Wrote %d bytes to the connection", bytesWritten);
+    AMZLog(@"Wrote %ld bytes to the connection", (long)bytesWritten);
 }
 #endif
 
