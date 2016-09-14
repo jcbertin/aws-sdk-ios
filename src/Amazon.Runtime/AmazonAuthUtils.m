@@ -238,7 +238,7 @@
     for (NSString *header in sortedHeaders) {
         [headerString appendString:[header lowercaseString]];
         [headerString appendString:@":"];
-        [headerString appendString:[theHeaders valueForKey:header]];
+        [headerString appendString:(NSString* __nonnull)[theHeaders valueForKey:header]];
         [headerString appendString:@"\n"];
     }
 

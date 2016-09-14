@@ -298,7 +298,7 @@
     if ([AmazonLogger isVerboseLoggingEnabled]) {
         AMZLogDebug(@"%@ %@", [urlRequest HTTPMethod], [urlRequest URL]);
         AMZLogDebug(@"Request body: ");
-        NSString *rBody = [[NSString alloc] initWithData:[urlRequest HTTPBody] encoding:NSUTF8StringEncoding];
+        NSString *rBody = [[NSString alloc] initWithData:(NSData* __nonnull)[urlRequest HTTPBody] encoding:NSUTF8StringEncoding];
         AMZLogDebug(@"%@", rBody);
         [rBody release];
     }
